@@ -4,7 +4,7 @@ Challenge:
   Write a JavaScript program to convert a comma-separated values (CSV) string to a 2D array of objects. 
   The first row of the string is used as the title row.
   
-Solution: 
+##Solution: 
 
 1. I utilized the string functions .split() and .slice() to convert the CSV to and array properly. The slice() method returns the selected elements in an array, as a new array object. split() function splits the given string into array of strings by separating it into substrings specified by the separator. In this case the seapartor is a comma.
 ```javascript
@@ -50,7 +50,7 @@ function CSV_to_JSON (str){
 console.log(CSV_to_JSON('col1,col2\na,b\nc,d')); // [{'col1': 'a', 'col2': 'b'}, {'col1': 'c', 'col2': 'd'}];
 ```
 
-## Resources
+### Resources
 
 -https://www.w3resource.com/javascript-exercises/fundamental/index.php
 -https://codeburst.io/learn-understand-javascripts-reduce-function-b2b0406efbdc
