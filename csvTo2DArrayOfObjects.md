@@ -12,11 +12,14 @@ let titleString = str.split('\n').shift() \\ col1,col2
 let titlesArray = keyString.split(','); \\[ 'col1', 'col2' ]
 let values = str.split('\n').slice(1) \\[ 'a,b', 'c,d' ]
 ```
+
 2. I then iterate through the "values" array ussing the map function. I do more string manipulation and use the reducing function. The reduce function is useful for when you want to flatten an array. The callback function as 4 arguments. Here I'm using 3 out of the four. I'm using:
-      accumulator — Accumulates all of the callbacks returned values.
-      val — the current value being processed
-      index — the current index of the value being processed
+  + accumulator — Accumulates all of the callbacks returned values.
+  + val — the current value being processed
+  + index — the current index of the value being processed
+
 I'm initalizing the accumulator as an object and returning that object after I define key value pairs. When this completes I get an 2D array of objects.
+
 ```javascript
 return values.map(item =>{
       //Split values by comma.Iterate through array
@@ -53,4 +56,5 @@ console.log(CSV_to_JSON('col1,col2\na,b\nc,d')); // [{'col1': 'a', 'col2': 'b'},
 ### Resources
 
 -https://www.w3resource.com/javascript-exercises/fundamental/index.php
+
 -https://codeburst.io/learn-understand-javascripts-reduce-function-b2b0406efbdc
