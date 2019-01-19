@@ -1,6 +1,6 @@
 # Object to CSV
 
-Challenge: Write a JavaScript program to convert an array of objects to a comma-separated values (CSV) string that contains only the columns specified.
+Challenge: Write a JavaScript program to convert an array of objects to a comma-separated values (CSV) string that contains only the columns specified. Check out the code [here](https://github.com/knapii-developments/javascript/blob/master/JSFundamentals/objectToCSV/json_to_CSV)
 
 ## Solution
 
