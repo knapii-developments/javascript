@@ -4,7 +4,7 @@ Day 3 challenge has to deal with using CSS custom properties (Variables).
 Just like in JS, styles sheets can contain values that will be reused throughout the document.
 Instead of re-writting that value, we can just store it as a value.
 
-Check out the final results in my [codePen](https://codepen.io/pen/?editors=1011). Also, the [source code](https://github.com/knapii-developments/javascript/blob/master/JS30Challenges/Day3/CSSVariablesCode.html)
+Check out the final results in my [codePen](https://codepen.io/knapii-developer/pen/YdmeOJ). Also, the [source code](https://github.com/knapii-developments/javascript/blob/master/JS30Challenges/Day3/CSSVariablesCode.html)
 
 ### Solution
 
