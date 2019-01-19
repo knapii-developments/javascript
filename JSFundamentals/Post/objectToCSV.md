@@ -16,7 +16,6 @@ function JSON_to_CSV (json, columns){
       return accum;
     }, [])
     })
-    console.log(columnsArray);
     return columnsArray.join(',')
   
 }
