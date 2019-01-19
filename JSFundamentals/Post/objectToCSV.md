@@ -20,10 +20,12 @@ function JSON_to_CSV (json, columns){
     return columnsArray.join(',')
   
 }
+console.log(JSON_to_CSV([{ x: 100, y: 200 }, { x: 300, y: 400, z: 500 }, { x: 6 }, { y: 7 }], ['x', 'y']));
 ```
 
-console.log(JSON_to_CSV([{ x: 100, y: 200 }, { x: 300, y: 400, z: 500 }, { x: 6 }, { y: 7 }], ['x', 'y']));
+
 
 
 ### Resources
 - https://www.w3resource.com/javascript-exercises/fundamental/javascript-fundamental-exercise-5.php
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
