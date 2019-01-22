@@ -67,21 +67,6 @@ function isEqualUsingSome(objA, objB){
 }
 ```
 
-var obj1 = {
-    name: "Sankalp",
-    job: "JavaScript Developer"
-};
-var obj2 = {
-    name: "Sankalp",
-    job: "JavaScript Developer"
-};
-
-console.log(isEqual(obj1, obj2));
-console.log(isEqualUsingSome(obj1, obj3))
-console.log(isEqualUsingSome(obj1, obj2))
-console.log(isEqualUsingEvery(obj1, obj3));
-console.log(isEqualUsingEvery(obj1, obj2));
-```
 
 ## Resources
 

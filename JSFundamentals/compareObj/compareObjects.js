@@ -17,17 +17,6 @@ function isEqual(objA, objB){
        }
   }
   return true;
-
-}
-function isEqualUsingSome(objA, objB){
-  var a = Object.keys(objA);
-  var b = Object.keys(objB);
-  var found = false;
-
-  //looping though array using some method
-  return (a.some(function(item){
-    return(objA[item] != objB[item])}
-  ) == false)
 }
 
 function isEqualUsingEvery(objA, objB){
@@ -42,6 +31,19 @@ function isEqualUsingEvery(objA, objB){
       return objA[item]==objB[item]})
 }
 
+function isEqualUsingSome(objA, objB){
+  var a = Object.keys(objA);
+  var b = Object.keys(objB);
+  var found = false;
+
+  //looping though array using forEach method
+  return (a.some(function(item){
+    return(objA[item] != objB[item])}
+  ) == false)
+}
+
+
+
 var obj1 = {
     name: "Sankalp",
     job: "JavaScript Developer"
@@ -50,12 +52,13 @@ var obj2 = {
     name: "Sankalp",
     job: "JavaScript Developer"
 };
+
 var obj3 = {
     name: "Sankal",
-    job: "JavaScrpt Developer"
+    job: "JavaScript Developer"
 };
 
-console.log(isEqual(obj1,obj2));
+console.log(isEqual(obj1, obj2));
 console.log(isEqualUsingSome(obj1, obj3))
 console.log(isEqualUsingSome(obj1, obj2))
 console.log(isEqualUsingEvery(obj1, obj3));
