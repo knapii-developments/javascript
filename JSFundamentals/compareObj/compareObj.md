@@ -1,10 +1,15 @@
 # Comparing two objects
 
-This is a Challenge I found from w3resouruce. This is challenge number 1. 
-
-I did the challenge 3 different ways. Here we can see how to utilize array methods every() and forEach(). 
+This is a challenge I found from w3resource. This is challenge number 1.
 
 Prompt: Write a JavaScript program to compare two objects to determine if the first  one contains equivalent property values to the second one.
+
+## Solution
+
+I did the challenge 3 different ways. Here we can see how to utilize array methods every() and some().
+
+For the first way I gab the key values by using .getOwnPropertyNames() which returns an array of key values.
+I then check lengths and if the lengths are then same I iterate thru the array to ensure the property values are the same.
 
 ```javascript
 function isEqual(objA, objB){
@@ -13,7 +18,6 @@ function isEqual(objA, objB){
   // If count of properties is different,
   // objects are not equivalent
   if (aProps.length != bProps.length) {
-    control.log("I made it here")
       return false;
   }
   //Looping through array using classing for loop
@@ -29,7 +33,12 @@ function isEqual(objA, objB){
   return true;
 
 }
+```
 
+For the second attempt I utilize the .every() function. .every() checks every value in the array and will
+return true or false if all values meet the given condition.
+
+```javascript
 function isEqualUsingEvery(objA, objB){
   var a = Object.keys(objA);
   var b = Object.keys(objB);
@@ -38,30 +47,25 @@ function isEqualUsingEvery(objA, objB){
     return false;
   }
   //Looping through array using every function
-  return a.every(keyExsist)
-  
-
-
+  return a.every(function(item){
+      return objA[item]==objB[item]})
 }
-function isEqualUsingForEach(objA, objB){
+```
+
+For the third attempt I utilize the .some() function. .some() will keep iterating through the array until it meets the first values that satisfies the condition.
+
+```javascript
+function isEqualUsingSome(objA, objB){
   var a = Object.keys(objA);
   var b = Object.keys(objB);
   var found = false;
-  
+
   //looping though array using forEach method
-  a.forEach(item =>{
-    console.log(item);
-    //inline if statement
-    found = ((objA[item] = objB[item]) ? true : false);
-  })
-
-  return found;
+  return (a.some(function(item){
+    return(objA[item] != objB[item])}
+  ) == false)
 }
-
-//Function returns boolean value by determining if key values are the same
-function keyExist(currentElement, index, array){
-  return obj1[currentElement] == obj2[currentElement];
-}
+```
 
 var obj1 = {
     name: "Sankalp",
@@ -72,9 +76,11 @@ var obj2 = {
     job: "JavaScript Developer"
 };
 
-console.log(isEqual(obj1,obj2));
+console.log(isEqual(obj1, obj2));
+console.log(isEqualUsingSome(obj1, obj3))
+console.log(isEqualUsingSome(obj1, obj2))
+console.log(isEqualUsingEvery(obj1, obj3));
 console.log(isEqualUsingEvery(obj1, obj2));
-console.log(isEqualUsingForEach(obj1, obj2))
 ```
 
 ## Resources
