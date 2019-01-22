@@ -45,6 +45,19 @@
   </style>
 
   <script>
+      let root = document.documentElement;
+      var controlInputs = document.querySelectorAll('.controls input');
+
+    controlInputs.forEach( (input) => {
+      input.addEventListener("change", setCSSVariableHandler);
+      input.addEventListener('mousemove', setCSSVariableHandler);
+    })
+
+    function setCSSVariableHandler(e){
+      const suffix = this.dataset.sizing || '';
+       root.style.setProperty(`--${this.name}`, this.value+suffix);
+
+     }
   </script>
 
 </body>
